@@ -49,7 +49,7 @@ export default function ClientDashboard({ setEmployees, setSession, User }) {
             </div>
           </Link> */}
             <Link
-              to="/Dashboard/employee"
+              to="/Dashboard/information"
               className="lg:h-12 h-10 bg-bgColor-200 shadow-sm lg:rounded-lg rounded  flex justify-center items-center">
               <div className="lg:w-15%">
                 <PersonIcon className="text-primary-200" fontSize="medium" />
@@ -59,7 +59,7 @@ export default function ClientDashboard({ setEmployees, setSession, User }) {
               </div>
             </Link>
             <Link
-              to="/Dashboard/payroll"
+              to="/Dashboard/payslip"
               className="lg:h-12 h-10 bg-bgColor-200 shadow-sm lg:rounded-lg rounded  flex justify-center items-center">
               <div className="lg:w-15%">
                 <ReceiptLongIcon

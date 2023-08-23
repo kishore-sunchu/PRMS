@@ -12,6 +12,9 @@ import AddEmployee from "./component/Employees/AddEmployee";
 import ModifyEmployee from "./component/Employees/ModifyEmployee";
 import RemoveEmployee from "./component/Employees/RemoveEmployee";
 import ClientDashboard from "./component/Client/ClientDashboard";
+import Profile from "./component/Client/Profile";
+import Information from "./component/Client/Information";
+import Payslip from "./component/Client/Payslip";
 
 function App() {
   const [Session, setSession] = useState(0);
@@ -36,7 +39,14 @@ function App() {
         <Routes>
           <Route
             index
-            element={<Login setSession={setSession} setUser={setUser} />}
+            element={
+              <Login
+                setSession={setSession}
+                setUser={setUser}
+                setEmployees={setEmployees}
+                Employees={Employees}
+              />
+            }
           />
           <Route
             path="/home"
@@ -115,8 +125,39 @@ function App() {
               ) : (
                 <Error />
               )
-            }
-          />
+            }>
+            <Route
+              path=""
+              element={
+                <Profile
+                  User={User}
+                  setEmployees={setEmployees}
+                  Employees={Employees}
+                />
+              }
+            />
+            <Route
+              path="information"
+              element={
+                <Information
+                  User={User}
+                  setEmployees={setEmployees}
+                  Employees={Employees}
+                />
+              }
+            />
+            <Route
+              path="payslip"
+              element={
+                <Payslip
+                  Employees={Employees}
+                  lastDate={lastDate}
+                  Status={Status}
+                  setStatus={setStatus}
+                />
+              }
+            />
+          </Route>
         </Routes>
       </Router>
     </>

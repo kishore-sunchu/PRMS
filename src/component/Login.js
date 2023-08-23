@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Login({ setSession, setUser }) {
+export default function Login({
+  setSession,
+  setUser,
+  setid,
+  setEmployees,
+  Employees,
+}) {
   useEffect(() => {
     document.title = `PayrollCentral | SignIn`;
   });
@@ -33,6 +39,17 @@ export default function Login({ setSession, setUser }) {
     } else if (data.status === "true" && data.user === "Employee") {
       setSession(2);
       setUser(data.fname);
+      // setid(data.id);
+      const response = await fetch("http://localhost:5000/employeeData", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+        body: JSON.stringify({ emp_id: data.id }),
+      });
+      const UserData = await response.json();
+      setEmployees(UserData);
+      console.log(Employees);
       navigate("/Dashboard");
     } else {
       alert("Invalid Username and Password");

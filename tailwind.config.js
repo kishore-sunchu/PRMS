@@ -29,6 +29,8 @@ module.exports = {
         'logoIcon':"url(/src/image/logoIcon.svg)",
         'logoIconSm':"url(/src/image/logoIconSm.png)",
         'payroll':"url(/src/image/payroll.svg)",
+        'profile':"url(/src/image/profile.svg)",
+        'user':"url(/src/image/user.png)",
       },
       spacing: {
         '5%': '5%',

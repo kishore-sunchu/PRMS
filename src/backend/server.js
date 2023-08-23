@@ -28,7 +28,12 @@ server.post("/auth", async (req, res) => {
     if (user !== null) {
       res
         .status(200)
-        .json({ status: "true", fname: user.fname, user: "Employee" });
+        .json({
+          status: "true",
+          fname: user.fname,
+          user: "Employee",
+          id: user.emp_id,
+        });
     } else {
       console.log("sended false");
       res.send(false);
@@ -88,15 +93,8 @@ server.post("/update", async (req, res) => {
   const user = await User.findOne({ emp_id: emp_id });
   if (user !== null) {
     const data = await user.updateOne({
-      fname: req.body.fname,
-      lname: req.body.lname,
       email: req.body.email,
       phone: req.body.phone,
-      dob: req.body.dob,
-      gender: req.body.gender,
-      hire_date: req.body.hire_date,
-      job_title: req.body.job_title,
-      salary: req.body.salary,
       password: req.body.password,
     });
     if (data !== null) {
