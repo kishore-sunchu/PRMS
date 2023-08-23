@@ -71,10 +71,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 Dependencies for run the project:
-npm install mongooose
-npm install body-parser
-npm install cors
-npm install express
-npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
-npm install react-countup
-npm install react-router-dom
+- npm install mongooose
+- npm install body-parser
+- npm install cors
+- npm install express
+- npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
+- npm install react-countup
+- npm install react-router-dom
