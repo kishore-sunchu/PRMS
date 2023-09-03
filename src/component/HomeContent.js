@@ -79,7 +79,7 @@ export default function HomeContent({
               </div>
               <div className="h-70%  flex lg:justify-start items-center text-bgColor-200 text-base">
                 <Link to={"/home/payroll"} className="h-60% lg:w-80% w-full">
-                  <button className="bg-primary-100 h-full lg:w-80% w-full rounded text-textColor-100">
+                  <button className="bg-primary-100 h-full lg:w-80% w-full rounded shadow-lg shadow-bgColor-200 text-textColor-100">
                     View Details & Pay
                   </button>
                 </Link>

@@ -7,15 +7,16 @@ const User = require("./modal/User");
 const port = 5000;
 const server = express();
 server.use(cors());
-// server.use(bodyParser.urlencoded());
-// server.use(bodyParser.json());
 server.use(bodyParser());
 connectToMongo();
 
+//  to start the localhost 
 server.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
+
+// for login purpose
 server.post("/auth", async (req, res) => {
   const userId = req.body.fname;
   const userPassword = req.body.password;
@@ -41,6 +42,7 @@ server.post("/auth", async (req, res) => {
   }
 });
 
+// for count user and total salary
 server.post("/countUser", async (req, res) => {
   const count = await User.countDocuments();
   const totalSalary = await User.aggregate([
@@ -50,12 +52,14 @@ server.post("/countUser", async (req, res) => {
   res.status(200).json({ count: count, salary: salaryCount });
 });
 
+// for find all employees  data
 server.post("/employees", async (req, res) => {
   const employees = await User.find();
   res.send(employees);
-  // console.log(employees);
 });
 
+
+// add new employee
 server.post("/add", async (req, res) => {
   const user = new User();
   user.fname = req.body.fname;
@@ -77,6 +81,7 @@ server.post("/add", async (req, res) => {
   }
 });
 
+// for employee data  by using id
 server.post("/employeeData", async (req, res) => {
   const emp_id = req.body.emp_id;
   const user = await User.findOne({ emp_id: emp_id });
@@ -88,6 +93,8 @@ server.post("/employeeData", async (req, res) => {
   }
 });
 
+
+// for update employee information
 server.post("/update", async (req, res) => {
   const emp_id = req.body.emp_id;
   const user = await User.findOne({ emp_id: emp_id });
@@ -107,6 +114,7 @@ server.post("/update", async (req, res) => {
   }
 });
 
+// for delete employee information
 server.post("/delete", async (req, res) => {
   const emp_id = req.body.emp_id;
   const user = await User.findOne({ emp_id: emp_id });

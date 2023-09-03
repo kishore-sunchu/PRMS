@@ -49,7 +49,6 @@ export default function Login({
       });
       const UserData = await response.json();
       setEmployees(UserData);
-      console.log(Employees);
       navigate("/Dashboard");
     } else {
       alert("Invalid Username and Password");
