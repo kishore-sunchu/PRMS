@@ -54,7 +54,6 @@ export default function RemoveEmployee({ setEmployees }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("delete");
     const response = await fetch("http://localhost:5000/delete", {
       headers: {
         "Content-Type": "application/json",
