@@ -5,7 +5,6 @@ import Login from "./component/Login";
 import Home from "./component/Home";
 import HomeContent from "./component/HomeContent";
 import Payroll from "./component/Payroll";
-import Summary from "./component/Summary";
 import Error from "./component/Error";
 import Employee from "./component/Employees/Employee";
 import AddEmployee from "./component/Employees/AddEmployee";
@@ -76,7 +75,6 @@ function App() {
                 />
               }
             />
-            <Route path="summary" element={<Summary />} />
             <Route
               path="employee"
               element={

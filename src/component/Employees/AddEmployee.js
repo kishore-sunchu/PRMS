@@ -72,14 +72,14 @@ export default function AddEmployee({ setEmployees, userCount }) {
                     type="text"
                     placeholder="First name"
                     name="fname"
-                    onChange={handleChange}
+                    onChange={handleChange} required
                     className="bg-bgColor-200 lg:w-40% w-90% rounded outline-none border-b border-primary-200 p-2 pl-3 m-2"
                   />
                   <input
                     type="text"
                     placeholder="Last name"
                     name="lname"
-                    onChange={handleChange}
+                    onChange={handleChange} required
                     className="bg-bgColor-200 lg:w-40% w-90% rounded outline-none border-b border-primary-200 p-2 pl-3 m-2"
                   />
                 </div>
@@ -89,7 +89,7 @@ export default function AddEmployee({ setEmployees, userCount }) {
                     type="text"
                     placeholder="@gmail.com"
                     name="email"
-                    onChange={handleChange}
+                    onChange={handleChange} required
                     className="bg-bgColor-200 lg:w-90% w-90% rounded outline-none border-b border-primary-200 p-2 pl-3 m-2"
                   />
                 </div>
@@ -99,7 +99,7 @@ export default function AddEmployee({ setEmployees, userCount }) {
                     type="number"
                     placeholder="+91 9876543210"
                     name="phone"
-                    onChange={handleChange}
+                    onChange={handleChange} required
                     className="bg-bgColor-200 lg:w-90%  w-90% rounded outline-none border-b border-primary-200 p-2 pl-3 m-2"
                   />
                 </div>
@@ -115,13 +115,13 @@ export default function AddEmployee({ setEmployees, userCount }) {
                       e.target.type = "text";
                     }}
                     name="dob"
-                    onChange={handleChange}
+                    onChange={handleChange} required
                     className="bg-bgColor-200 lg:w-50%  w-90% rounded outline-none border-b border-primary-200 p-2 pl-3 m-2"
                   />
                   <select
                     name="gender"
                     id="gender"
-                    onChange={handleChange}
+                    onChange={handleChange} required
                     className="bg-bgColor-200 lg:w-30% w-90% rounded outline-none border-b border-primary-200 p-2 pl-3 m-2">
                     <option value="default">Gender</option>
                     <option value="Male">Male</option>
@@ -141,7 +141,7 @@ export default function AddEmployee({ setEmployees, userCount }) {
                     name="emp_id"
                     value={11001 + userCount}
                     disabled
-                    // onChange={handleChange}
+                    // onChange={handleChange} required
                     className="bg-bgColor-200 lg:w-90%  w-90% rounded outline-none border-b border-primary-200 p-2 pl-3 m-2"
                   />
                 </div>
@@ -157,14 +157,14 @@ export default function AddEmployee({ setEmployees, userCount }) {
                       e.target.type = "text";
                     }}
                     name="hire_date"
-                    onChange={handleChange}
+                    onChange={handleChange} required
                     className="bg-bgColor-200 lg:w-40%  w-90% rounded outline-none border-b border-primary-200 p-2 pl-3 m-2"
                   />
                   <input
                     type="text"
                     placeholder="Designation"
                     name="job_title"
-                    onChange={handleChange}
+                    onChange={handleChange} required
                     className="bg-bgColor-200 capitalize lg:w-40% w-90% rounded outline-none border-b border-primary-200 p-2 pl-3 m-2"
                   />
                 </div>
@@ -174,7 +174,7 @@ export default function AddEmployee({ setEmployees, userCount }) {
                     type="number"
                     placeholder="Salary"
                     name="salary"
-                    onChange={handleChange}
+                    onChange={handleChange} required
                     className="bg-bgColor-200 lg:w-90%  w-90% rounded outline-none border-b border-primary-200 p-2 pl-3 m-2"
                   />
                 </div>
@@ -184,7 +184,7 @@ export default function AddEmployee({ setEmployees, userCount }) {
                     type="text"
                     placeholder="Password"
                     name="password"
-                    onChange={handleChange}
+                    onChange={handleChange} required
                     className="bg-bgColor-200 lg:w-90%  w-90% rounded outline-none border-b border-primary-200 p-2 pl-3 m-2"
                   />
                   <div className="flex justify-start items-center w-90% text-textColor-200 lg:text-base text-xs">
